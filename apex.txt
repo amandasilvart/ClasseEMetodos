@@ -1,0 +1,141 @@
+/*1) Explique os conceitos de POO e dê exemplos: Classe Método Atributo Objeto
+POO programação orientada a objeto , nesse tipo de programação existe a classe que
+diz como o objeto vai se comportar, a funcionalidade do objeto se dá através dos
+métodos e atributos são as características desse objeto.*/
+
+/*2) Crie uma classe Cachorro, com os atributos string nome, peso, raça, com os
+seguintes métodos:
+● método latir, que imprime: *nome* disse: AUUUUUU.
+● método andar, que imprime: *nome* está andando.
+● método ronronar, que imprime: “nome* está ronronando.
+● método infoCachorro, que imprime os valores dos atributos nome, peso, raça.*/
+public class cachorro {
+public string nome;
+public string peso;
+public string raca;
+public void latir(){
+system.debug(nome +' Disse Auuuuu');
+}
+public void andar(){
+system.debug(nome +' Está anadando');
+}
+public void ronronar(){
+system.debug(nome + 'Esta ronronando');
+}
+public string infoCachorro(string novoCachorro){
+string novoCachoro = nome + peso + raca;
+return novoCachorro;
+
+}
+}
+//● TESTE
+cachorro nina = new cachorro ();
+nina.nome= 'Valentina ';
+nina.peso = '5kg';
+nina.raca = 'sthitzu';
+System.debug (nina);
+nina.latir();
+nina.andar();
+nina.ronronar();
+
+/*3) Crie uma classe chamada Pizzaria, com o seguinte método:
+pedir(String pizza), com o parâmetro recebido verifique:
+Se pizza igual a Calabresa, imprimir:
+Pizza de Calabresa, valor R$ 45,00
+Se pizza igual a 4 Queijos, imprimir:
+Pizza 4 Queijos, valor R$ 50,00
+Se pizza igual a Maria Bonita, imprimir:
+Pizza Maria Bonita, R$ 60,00
+Senão, imprimir
+Não possuímos essa Pizza.*/
+public class Pizzaria {
+public string sabor;
+public void pedido(){
+if(sabor =='calabresa'){
+system.debug('Pizza de Calabresa, valor R$ 45,00');
+}else if(sabor=='4 queijos'){
+system.debug(' Pizza 4 Queijos, valor R$ 50,00');
+}else if (sabor=='Maria bonita'){
+system.debug('Pizza Maria Bonita, R$ 60,00');
+}else{
+system.debug(' Não possuímos essa Pizza.');
+}
+}
+}
+//● TESTE
+pizzaria novo = new pizzaria ();
+novo.sabor='calabresa';
+novo.pedido();
+
+//4) Faça uma calculadora que realize as 4 principais operações (Adição,Sub,Div,Mult)
+public class calculadora {
+public decimal somar( decimal n1, decimal n2){
+return n1+n2;
+}
+public decimal subtrair(decimal n1, decimal n2){
+return n1-n2;
+}
+
+public decimal dividir(decimal n1, decimal n2){
+return n1/n2;
+}
+public decimal multiplicar (decimal n1, decimal n2){
+return n1*n2;
+}
+}
+//● TESTE
+calculadora novo = new calculadora ();
+System.debug (novo.somar(1,2));
+System.debug (novo.subtrair(1,2));
+System.debug (novo.dividir(1,2));
+System.debug (novo.multiplicar(1,2));
+//5)Conversor de medidas. Faça uma calculadora que converta 10 medidas
+public class conversor {
+public decimal converterQuiloGrama(decimal quilo){
+return 1000*quilo;
+}
+public decimal converterGramaQuilo(decimal grama){
+return 0001*grama;
+}
+public decimal converterMetrosCentimetros(decimal metros){
+return 100*metros;
+}
+public decimal converterkmCentimetros(decimal cm){
+return cm * 1000000;
+}
+}
+//● TESTE
+conversor novo = new conversor();
+
+system.debug(novo.converterkmCentimetros(2));
+system.debug(novo.converterQuiloGrama(2));
+system.debug(novo.converterMetrosCentimetros(2));
+system.debug(novo.converterkmCentimetros(2));
+
+//6) Calculo de Areas Geométricas. Calcule 5 Áreas geométricas diferentes
+public class areasGeometricas {
+public decimal raio;
+
+public decimal area(decimal raio){
+return (raio*raio)*2.4;
+}
+public decimal triangulo(decimal base, decimal altura){
+return (base*altura)/2;
+}
+public decimal AreaRetangulo(decimal base, decimal altura){
+return base*altura;
+}
+public decimal AreaDoQuadrado(decimal lados){
+return lados*lados;
+}
+public decimal areaLosango(decimal diagonalMaior, decimal diagonalMenor){
+return (diagonalMaior*diagonalMenor)/2;
+}
+}
+//● TESTE
+areasGeometricas novo = new areasGeometricas();
+system.debug(novo.area(8));
+system.debug(novo.triangulo(8,6));
+system.debug(novo.AreaRetangulo(6,6));
+system.debug(novo.AreaDoQuadrado(5));
+system.debug(novo.areaLosango(12,16));
